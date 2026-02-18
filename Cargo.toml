@@ -1,0 +1,33 @@
+[package]
+name = "mcp-gdb-server"
+version = "0.1.0"
+edition = "2021"
+description = "MCP server for GDB debugging with gdb and remote target support"
+authors = ["petitstrawberry <petitstrawberry.dev@gmail.com>"]
+license = "MIT"
+
+[[bin]]
+name = "mcp-gdb-server"
+path = "src/main.rs"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Utilities
+anyhow = "1.0"
+thiserror = "2.0.18"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+regex = "1.10"
+async-trait = "0.1"
+
+# Process management
+uuid = { version = "1.6", features = ["v4"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
