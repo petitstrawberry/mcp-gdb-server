@@ -1,5 +1,11 @@
 # MCP GDB Server
 
+> **⚠️ 実験的プロジェクト**
+> 
+> このプロジェクトは**完全にAIによって作成されました**。AIがどこまで実用的なソフトウェアを開発できるかを探る実験として作られています。教育目的および実験目的で提供されています。動作確認は行っていますが、まだ発見されていないバグやエッジケースが含まれている可能性があります。
+>
+> **問題やバグを発見した場合、改善の提案がある場合は、[Issues](https://github.com/petitstrawberry/mcp-gdb-server/issues) からご報告ください。** 皆様からのフィードバックは、このプロジェクトとAI支援開発の理解を深めるのに役立ちます。
+
 [English](README.md)
 
 GDBを操作するためのMCP (Model Context Protocol) サーバー。gdb-multiarchとリモートデバッグターゲットに対応しています。
@@ -66,14 +72,16 @@ cargo build --release
 | `gdb_target_connect` | リモートターゲットに接続 (TCP/シリアル) |
 | `gdb_target_disconnect` | リモートターゲットから切断 |
 
-#### ブレークポイント
+#### ブレークポイント・ウォッチポイント
 
 | ツール | 説明 |
 |--------|------|
 | `gdb_break_insert` | ブレークポイントを設定 |
 | `gdb_break_delete` | ブレークポイントを削除 |
-| `gdb_break_list` | ブレークポイント一覧を表示 |
+| `gdb_break_list` | ブレークポイント・ウォッチポイント一覧を表示 |
 | `gdb_break_toggle` | ブレークポイントの有効/無効を切り替え |
+| `gdb_watch_insert` | ウォッチポイントを設定 (書き込み/読み込み/アクセス) |
+| `gdb_watch_delete` | ウォッチポイントを削除 |
 
 #### 実行制御
 

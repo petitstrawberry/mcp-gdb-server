@@ -1,5 +1,11 @@
 # MCP GDB Server
 
+> **⚠️ Experimental Project**
+> 
+> This project was **entirely written by AI** as an experiment to explore how far AI can go in developing practical software. It is intended for educational and experimental purposes. While it is functional and tested, it may contain bugs or edge cases not yet discovered.
+>
+> **If you encounter any issues, bugs, or have suggestions for improvement, please [report them via Issues](https://github.com/petitstrawberry/mcp-gdb-server/issues).** Your feedback helps improve both this project and our understanding of AI-assisted development.
+
 [日本語](README_ja.md)
 
 An MCP (Model Context Protocol) server for controlling GDB. Supports both local and remote debugging with any GDB executable.
@@ -109,14 +115,16 @@ Use this server when the user wants to:
 | `gdb_target_connect` | Connect to a remote target (TCP/serial) |
 | `gdb_target_disconnect` | Disconnect from the remote target |
 
-#### Breakpoints
+#### Breakpoints & Watchpoints
 
 | Tool | Description |
 |------|-------------|
 | `gdb_break_insert` | Set a breakpoint |
 | `gdb_break_delete` | Delete a breakpoint |
-| `gdb_break_list` | List all breakpoints |
+| `gdb_break_list` | List all breakpoints and watchpoints |
 | `gdb_break_toggle` | Enable/disable a breakpoint |
+| `gdb_watch_insert` | Set a watchpoint (write/read/access) |
+| `gdb_watch_delete` | Delete a watchpoint |
 
 #### Execution Control
 
