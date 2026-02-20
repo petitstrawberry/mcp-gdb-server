@@ -143,6 +143,7 @@ pub struct ToolsCapability {
 /// MCP Initialize Result
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct InitializeResult {
+    #[serde(rename = "protocolVersion")]
     pub protocol_version: String,
     pub capabilities: ServerCapabilities,
     pub server_info: Implementation,
